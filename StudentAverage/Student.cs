@@ -7,7 +7,7 @@ namespace StudentAverage
         public string Name { get; set; }
 
         public int[] Scores { get; set; }
-
+        
         public int? GetAverage()
         {
             int average = 0;
@@ -16,11 +16,10 @@ namespace StudentAverage
 
             foreach (int score in Scores)
             {
-                total = total + score;
+                total += score;
                 count++;
             }
-            average = total / count;
-
+            average = (int)Math.Round((double)total / (double)count);
             return average;
 
         }
