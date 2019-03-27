@@ -8,13 +8,6 @@ namespace StudentAverage
     {
         public static void Main()
         {
-            Program program = new Program();
-            program.Run();
-            Console.ReadLine();
-        }
-
-        private void Run()
-        {
             List<Student> studentList = CreateStudentList();
 
             foreach (var student in studentList)
@@ -25,7 +18,7 @@ namespace StudentAverage
             Console.ReadLine();
         }
 
-        private List<Student> CreateStudentList()
+        private static List<Student> CreateStudentList()
         {
             List<Student> studentList = new List<Student>();
 
@@ -37,7 +30,7 @@ namespace StudentAverage
             return studentList;
         }
 
-        private Student CreateStudent(string line)
+        private static Student CreateStudent(string line)
         {
             Student student = new Student();
             string[] properties = line.Split(" ");
